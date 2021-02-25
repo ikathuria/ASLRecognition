@@ -1,0 +1,26 @@
+<annotation>
+	<folder>base_images</folder>
+	<filename>P700.jpg</filename>
+	<path>/home/ishani/Desktop/Github/ASLRecognition/base_images/P700.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>p</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>17</xmin>
+			<ymin>24</ymin>
+			<xmax>200</xmax>
+			<ymax>157</ymax>
+		</bndbox>
+	</object>
+</annotation>

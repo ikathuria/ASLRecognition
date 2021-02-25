@@ -1,0 +1,26 @@
+<annotation>
+	<folder>base_images</folder>
+	<filename>U500.jpg</filename>
+	<path>/home/ishani/Desktop/Github/ASLRecognition/base_images/U500.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>u</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>100</xmin>
+			<ymin>70</ymin>
+			<xmax>160</xmax>
+			<ymax>188</ymax>
+		</bndbox>
+	</object>
+</annotation>

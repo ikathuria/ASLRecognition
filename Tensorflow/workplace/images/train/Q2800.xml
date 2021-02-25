@@ -1,0 +1,26 @@
+<annotation>
+	<folder>base_images</folder>
+	<filename>Q2800.jpg</filename>
+	<path>/home/ishani/Desktop/Github/ASLRecognition/base_images/Q2800.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>q</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>9</xmin>
+			<ymin>28</ymin>
+			<xmax>200</xmax>
+			<ymax>174</ymax>
+		</bndbox>
+	</object>
+</annotation>

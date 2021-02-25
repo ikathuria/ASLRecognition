@@ -1,0 +1,26 @@
+<annotation>
+	<folder>base_images</folder>
+	<filename>Z2950.jpg</filename>
+	<path>/home/ishani/Desktop/Github/ASLRecognition/base_images/Z2950.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>z</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>84</xmin>
+			<ymin>117</ymin>
+			<xmax>196</xmax>
+			<ymax>186</ymax>
+		</bndbox>
+	</object>
+</annotation>
