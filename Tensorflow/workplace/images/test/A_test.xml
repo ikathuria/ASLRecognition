@@ -1,0 +1,26 @@
+<annotation>
+	<folder>test</folder>
+	<filename>A_test.jpg</filename>
+	<path>C:\Users\admin\OneDrive\Github\ASLRecognition\Tensorflow\workplace\images\test\A_test.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>a</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>70</xmin>
+			<ymin>25</ymin>
+			<xmax>177</xmax>
+			<ymax>165</ymax>
+		</bndbox>
+	</object>
+</annotation>
