@@ -1,0 +1,26 @@
+<annotation>
+	<folder>base_images</folder>
+	<filename>C2750.jpg</filename>
+	<path>C:\Users\admin\OneDrive\Github\ASLRecognition\base_images\C2750.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>c</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2</xmin>
+			<ymin>12</ymin>
+			<xmax>131</xmax>
+			<ymax>129</ymax>
+		</bndbox>
+	</object>
+</annotation>

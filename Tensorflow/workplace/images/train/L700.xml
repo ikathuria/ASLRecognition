@@ -1,0 +1,26 @@
+<annotation>
+	<folder>base_images</folder>
+	<filename>L700.jpg</filename>
+	<path>C:\Users\admin\OneDrive\Github\ASLRecognition\base_images\L700.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>l</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>65</xmin>
+			<ymin>27</ymin>
+			<xmax>198</xmax>
+			<ymax>164</ymax>
+		</bndbox>
+	</object>
+</annotation>

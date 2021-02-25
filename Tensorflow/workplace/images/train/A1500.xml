@@ -1,0 +1,26 @@
+<annotation>
+	<folder>base_images</folder>
+	<filename>A1500.jpg</filename>
+	<path>C:\Users\admin\OneDrive\Github\ASLRecognition\base_images\A1500.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>a</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>16</xmin>
+			<ymin>28</ymin>
+			<xmax>107</xmax>
+			<ymax>122</ymax>
+		</bndbox>
+	</object>
+</annotation>
