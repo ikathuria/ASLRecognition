@@ -1,0 +1,26 @@
+<annotation>
+	<folder>base_images</folder>
+	<filename>K1950.jpg</filename>
+	<path>C:\Users\admin\OneDrive\Github\ASLRecognition\base_images\K1950.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>k</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>75</xmin>
+			<ymin>54</ymin>
+			<xmax>153</xmax>
+			<ymax>180</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>base_images</folder>
+	<filename>B2050.jpg</filename>
+	<path>C:\Users\admin\OneDrive\Github\ASLRecognition\base_images\B2050.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>b</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>62</xmin>
+			<ymin>24</ymin>
+			<xmax>142</xmax>
+			<ymax>173</ymax>
+		</bndbox>
+	</object>
+</annotation>

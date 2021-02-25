@@ -1,0 +1,26 @@
+<annotation>
+	<folder>base_images</folder>
+	<filename>C850.jpg</filename>
+	<path>C:\Users\admin\OneDrive\Github\ASLRecognition\base_images\C850.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>c</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>21</xmin>
+			<ymin>39</ymin>
+			<xmax>171</xmax>
+			<ymax>152</ymax>
+		</bndbox>
+	</object>
+</annotation>
