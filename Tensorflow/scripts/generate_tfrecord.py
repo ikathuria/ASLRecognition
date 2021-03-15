@@ -108,13 +108,13 @@ def split(df, group):
 
 def create_tf_example(group, path):
     with tf.io.gfile.GFile(os.path.join(path, '{}'.format(group.filename)), 'rb') as fid:
-        encoded_jpg = fid.read()
-    encoded_jpg_io = io.BytesIO(encoded_jpg)
-    image = Image.open(encoded_jpg_io)
+        encoded_png = fid.read()
+    encoded_png_io = io.BytesIO(encoded_png)
+    image = Image.open(encoded_png_io)
     width, height = image.size
 
     filename = group.filename.encode('utf8')
-    image_format = b'jpg'
+    image_format = b'png'
     xmins = []
     xmaxs = []
     ymins = []
@@ -135,7 +135,7 @@ def create_tf_example(group, path):
         'image/width': dataset_util.int64_feature(width),
         'image/filename': dataset_util.bytes_feature(filename),
         'image/source_id': dataset_util.bytes_feature(filename),
-        'image/encoded': dataset_util.bytes_feature(encoded_jpg),
+        'image/encoded': dataset_util.bytes_feature(encoded_png),
         'image/format': dataset_util.bytes_feature(image_format),
         'image/object/bbox/xmin': dataset_util.float_list_feature(xmins),
         'image/object/bbox/xmax': dataset_util.float_list_feature(xmaxs),
