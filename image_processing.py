@@ -89,6 +89,7 @@ def segment(model, src_path, dst_path):
     input_batch = preprocess(input_image).unsqueeze(0)
 
     if torch.cuda.is_available():
+        print('Yay GPU available hai!')
         input_batch = input_batch.to('cuda')
         model.to('cuda')
 
