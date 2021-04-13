@@ -197,57 +197,57 @@ while True:
 
     # take pictures
     if keypress == ord("a"):
-        cv2.imwrite(directory + "A/" + str(count["A"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "A/" + str(count["A"]) + ".jpg", roi)
     if keypress == ord("b"):
-        cv2.imwrite(directory + "B/" + str(count["B"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "B/" + str(count["B"]) + ".jpg", roi)
     if keypress == ord("c"):
-        cv2.imwrite(directory + "C/" + str(count["C"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "C/" + str(count["C"]) + ".jpg", roi)
     if keypress == ord("d"):
-        cv2.imwrite(directory + "D/" + str(count["D"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "D/" + str(count["D"]) + ".jpg", roi)
     if keypress == ord("e"):
-        cv2.imwrite(directory + "E/" + str(count["E"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "E/" + str(count["E"]) + ".jpg", roi)
     if keypress == ord("f"):
-        cv2.imwrite(directory + "F/" + str(count["F"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "F/" + str(count["F"]) + ".jpg", roi)
     if keypress == ord("g"):
-        cv2.imwrite(directory + "G/" + str(count["G"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "G/" + str(count["G"]) + ".jpg", roi)
     if keypress == ord("h"):
-        cv2.imwrite(directory + "H/" + str(count["H"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "H/" + str(count["H"]) + ".jpg", roi)
     if keypress == ord("i"):
-        cv2.imwrite(directory + "I/" + str(count["I"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "I/" + str(count["I"]) + ".jpg", roi)
     if keypress == ord("j"):
-        cv2.imwrite(directory + "J/" + str(count["J"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "J/" + str(count["J"]) + ".jpg", roi)
     if keypress == ord("k"):
-        cv2.imwrite(directory + "K/" + str(count["K"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "K/" + str(count["K"]) + ".jpg", roi)
     if keypress == ord("l"):
-        cv2.imwrite(directory + "L/" + str(count["L"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "L/" + str(count["L"]) + ".jpg", roi)
     if keypress == ord("m"):
-        cv2.imwrite(directory + "M/" + str(count["M"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "M/" + str(count["M"]) + ".jpg", roi)
     if keypress == ord("n"):
-        cv2.imwrite(directory + "N/" + str(count["N"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "N/" + str(count["N"]) + ".jpg", roi)
     if keypress == ord("o"):
-        cv2.imwrite(directory + "O/" + str(count["O"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "O/" + str(count["O"]) + ".jpg", roi)
     if keypress == ord("p"):
-        cv2.imwrite(directory + "P/" + str(count["P"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "P/" + str(count["P"]) + ".jpg", roi)
     if keypress == ord("q"):
-        cv2.imwrite(directory + "Q/" + str(count["Q"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "Q/" + str(count["Q"]) + ".jpg", roi)
     if keypress == ord("r"):
-        cv2.imwrite(directory + "R/" + str(count["R"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "R/" + str(count["R"]) + ".jpg", roi)
     if keypress == ord("s"):
-        cv2.imwrite(directory + "S/" + str(count["S"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "S/" + str(count["S"]) + ".jpg", roi)
     if keypress == ord("t"):
-        cv2.imwrite(directory + "T/" + str(count["T"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "T/" + str(count["T"]) + ".jpg", roi)
     if keypress == ord("u"):
-        cv2.imwrite(directory + "U/" + str(count["U"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "U/" + str(count["U"]) + ".jpg", roi)
     if keypress == ord("v"):
-        cv2.imwrite(directory + "V/" + str(count["V"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "V/" + str(count["V"]) + ".jpg", roi)
     if keypress == ord("w"):
-        cv2.imwrite(directory + "W/" + str(count["W"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "W/" + str(count["W"]) + ".jpg", roi)
     if keypress == ord("x"):
-        cv2.imwrite(directory + "X/" + str(count["X"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "X/" + str(count["X"]) + ".jpg", roi)
     if keypress == ord("y"):
-        cv2.imwrite(directory + "Y/" + str(count["Y"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "Y/" + str(count["Y"]) + ".jpg", roi)
     if keypress == ord("z"):
-        cv2.imwrite(directory + "Z/" + str(count["Z"]) + ".jpg", thresholded)
+        cv2.imwrite(directory + "Z/" + str(count["Z"]) + ".jpg", roi)
 
 cap.release()
 cv2.destroyAllWindows()
