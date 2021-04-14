@@ -7,8 +7,10 @@ from image_processing import segment
 src_directory = "ASL_data/"
 dst_directory = "ASL_data_processed/"
 
-labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
-          'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+# 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
+#           'I', 
+
+labels = ['J', 'K', 'L', 'M', 'N', 'O', 'P',
           'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
           'Y', 'Z']
 
@@ -30,6 +32,9 @@ while i < 26:
     for letter in labels:
         i += 1
         for img in os.listdir(src_directory + letter):
+            if count[letter] >= 100:
+                break
+
             count = {
                 "A": len(os.listdir(dst_directory + "A")),
                 "B": len(os.listdir(dst_directory + "B")),
@@ -64,8 +69,5 @@ while i < 26:
             dst_path = os.path.join(dst_directory+letter, img)
 
             segment(dlab, src_path, dst_path)
-
-            if count[letter] >= 100:
-                break
 
         print(letter, 'FINISHED.')

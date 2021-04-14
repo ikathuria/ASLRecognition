@@ -13,10 +13,7 @@ from keras.layers import Dropout
 from keras.callbacks import EarlyStopping
 
 # STEP 1: Converting dataset
-labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
-          'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
-          'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
-          'Y', 'Z']
+labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
 
 mode = "ASL"
 dataset_path = f"{mode}_data"
@@ -38,11 +35,8 @@ print("Total images in dataset:", len(loaded_images))
 
 outputVectors = []
 
-for i in range(26):
-    temp = [0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0]
+for i in range(9):
+    temp = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     temp[i] = 1
     for _ in range(0, k):
         outputVectors.append(temp)
@@ -56,8 +50,8 @@ print("y shape:", y.shape)
 
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42)
-X_train = X_train.reshape(X_train.shape[0], 100, 100, 1)
-X_test = X_test.reshape(X_test.shape[0], 100, 100, 1)
+X_train = X_train.reshape(X_train.shape[0], 100, 100, 3)
+X_test = X_test.reshape(X_test.shape[0], 100, 100, 3)
 print("Number of training images:", X_train.shape)
 print("Number of test images:", X_test.shape)
 print("---"*25, "\n\n\n")
@@ -66,9 +60,9 @@ print("---"*25, "\n\n\n")
 model = Sequential()
 
 # first conv layer
-# input shape = (img_rows, img_cols, 1)
+# input shape = (img_rows, img_cols, 3)
 model.add(Conv2D(32, kernel_size=(3, 3),
-                 activation="relu", input_shape=(100, 100, 1)))
+                 activation="relu", input_shape=(100, 100, 3)))
 model.add(BatchNormalization())
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Dropout(0.25))
@@ -84,7 +78,7 @@ model.add(Flatten())
 model.add(Dense(128, activation="relu"))
 model.add(Dropout(0.40))
 # softmax layer
-model.add(Dense(18, activation="softmax"))
+model.add(Dense(9, activation="softmax"))
 
 # compile model
 model.compile(
@@ -104,7 +98,7 @@ es_callback = EarlyStopping(monitor='val_loss', patience=3)
 model.fit(
     X_train,
     y_train,
-    batch_size=300,
+    batch_size=10,
     epochs=50,
     verbose=1,
     validation_data=(X_test, y_test),
