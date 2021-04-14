@@ -14,7 +14,7 @@ from keras.models import load_model
 accumWeight = 0.5
 
 # path
-latest_model = "model/" + "ASL_model.h5"
+latest_model = "model/" + "ASL_model2.h5"
 
 # labels in order of training output
 labels = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E', 5:'F', 6:'G', 7:'H',
@@ -55,6 +55,8 @@ def getPredictedClass(model):
 
     prediction = model.predict_on_batch(gray_image)
     predicted_class = np.argmax(prediction)
+    
+    print(predicted_class)
 
     return labels[predicted_class].upper()
 
@@ -90,10 +92,10 @@ while True:
 
     cv2.putText(clone, str(predictedClass), (70, 45),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-    
+
     cv2.rectangle(clone, (left, top), (right, bottom), (0, 255, 0), 2)
 
-    cv2.imshow("Gesture Recognition", clone)
+    cv2.imshow("ASL Recognition", clone)
 
     num_frames += 1
 
