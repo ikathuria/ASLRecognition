@@ -65,4 +65,7 @@ while i < 26:
 
             segment(dlab, src_path, dst_path)
 
+            if count[letter] == 100:
+                break
+
         print(letter, 'FINISHED.')
