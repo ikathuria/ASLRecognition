@@ -62,7 +62,7 @@ model = Sequential()
 # first conv layer
 # input shape = (img_rows, img_cols, 3)
 model.add(Conv2D(32, kernel_size=(3, 3),
-                 activation="relu", input_shape=(100, 100, 3)))
+                 activation="relu", input_shape=(100, 100)))
 model.add(BatchNormalization())
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Dropout(0.25))
