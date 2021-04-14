@@ -4,11 +4,6 @@ import os
 from torchvision import models
 from image_processing import segment
 
-
-def clear():
-    os.system('clear')
-
-
 src_directory = "ASL_data/"
 dst_directory = "ASL_data_processed/"
 
@@ -69,6 +64,5 @@ while i < 26:
             dst_path = os.path.join(dst_directory+letter, img)
 
             segment(dlab, src_path, dst_path)
-            clear()
 
         print(letter, 'FINISHED.')
