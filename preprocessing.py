@@ -7,7 +7,7 @@ from image_processing import segment
 src_directory = "ASL_data/"
 dst_directory = "ASL_data_processed/"
 
-labels = ['B', 'C', 'D', 'E', 'F', 'G', 'H',
+labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
           'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
           'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
           'Y', 'Z']
