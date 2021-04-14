@@ -14,12 +14,10 @@ from keras.callbacks import EarlyStopping
 
 # STEP 1: Converting dataset
 labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
-          'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
-          'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
-          'Y', 'Z']
+          'I']
 
 mode = "ASL"
-dataset_path = f"{mode}_data"
+dataset_path = f"{mode}_data_processed"
 
 loaded_images = []
 for folder in labels:
@@ -38,11 +36,8 @@ print("Total images in dataset:", len(loaded_images))
 
 outputVectors = []
 
-for i in range(26):
-    temp = [0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0]
+for i in range(9):
+    temp = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     temp[i] = 1
     for _ in range(0, k):
         outputVectors.append(temp)
@@ -84,7 +79,7 @@ model.add(Flatten())
 model.add(Dense(128, activation="relu"))
 model.add(Dropout(0.40))
 # softmax layer
-model.add(Dense(26, activation="softmax"))
+model.add(Dense(9, activation="softmax"))
 
 # compile model
 model.compile(
