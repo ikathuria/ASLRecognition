@@ -8,7 +8,7 @@ print("setting up, please wait...")
 import cv2
 import numpy as np
 from keras.models import load_model
-from image_processing import run_avg, segment
+# from image_processing import run_avg, segment
 
 # accumulated weight
 accumWeight = 0.5
@@ -18,9 +18,10 @@ latest_model = "model/" + "ASL_model.h5"
 
 # labels in order of training output
 labels = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E', 5:'F', 6:'G', 7:'H',
-          8: 'I', 9: 'J', 10: 'K', 11: 'L', 12: 'M', 13: 'N', 14: 'O',
-          15: 'P', 16: 'Q', 17:'R', 18:'S', 19:'T', 20:'U', 21:'V', 22:'W',
-          23:'X', 24: 'Y', 25: 'Z'}
+          8: 'I'}
+#  9: 'J', 10: 'K', 11: 'L', 12: 'M', 13: 'N', 14: 'O',
+#           15: 'P', 16: 'Q', 17:'R', 18:'S', 19:'T', 20:'U', 21:'V', 22:'W',
+#           23:'X', 24: 'Y', 25: 'Z'}
 
 
 def load_weights():
@@ -83,37 +84,13 @@ while True:
     gray = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
     gray = cv2.GaussianBlur(gray, (7, 7), 0)
 
-    # to get the background, keep looking till a threshold is reached
-    # so that our weighted average model gets calibrated
-    if num_frames < 30:
-        run_avg(gray, accumWeight)
-        if num_frames == 1:
-            print("\n[STATUS] please wait! calibrating...")
-        elif num_frames == 29:
-            print("[STATUS] calibration successfull...")
-            print("Press 'c' to recalibrate background")
-    else:
-        # segment the hand region
-        hand = segment(gray)
+    cv2.imwrite('Temp.png', roi)
 
-        if hand is not None:
-            (thresholded, segmented) = hand
-            
-            cv2.drawContours(clone, [segmented + (right, top)], -1, (0, 0, 255))
+    predictedClass = getPredictedClass(model)
 
-            cv2.imwrite('Temp.png', thresholded)
-
-            predictedClass = getPredictedClass(model)
-
-            cv2.putText(clone, str(predictedClass), (70, 45),
-                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-
-            cv2.imshow("Thesholded", thresholded)
-
-        else:
-            cv2.putText(clone, "BLANK", (70, 45),
-                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-
+    cv2.putText(clone, str(predictedClass), (70, 45),
+                cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+    
     cv2.rectangle(clone, (left, top), (right, bottom), (0, 255, 0), 2)
 
     cv2.imshow("Gesture Recognition", clone)
